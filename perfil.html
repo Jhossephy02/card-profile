@@ -1,0 +1,96 @@
+<! TIPO DOC html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Tarjeta de perfil</title>
+        <link rel="hoja de estilo" href="perfil.css">
+    </head>
+
+    <body>
+        <!--Barra de navegacion-->
+        < nav class="barra de navegación">
+            <div class="menú hamburguesa">
+                <ul class="lista-de-menús">
+                    <li><a href="#inicio" onclick="mostrarSeccion('inicio')">acerca de mi</a></li>
+                    <li><a href="#perfil" onclick="mostrarSeccion('proyectos')">Proyectos</a></li>
+                    <li><a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                </UL>
+            </div>
+            </nav>
+
+            <div id="main content">
+
+                <div id="inicio" class="section">
+                    <div class="Ficha-de-perfil">
+                        <div class="profile-card0"><img src="C:\Users\SENATI\Pictures\images.png" alt="foto de perfil"
+                                class="profile-image">
+                        </div>
+
+                        <h2 class="nombre-perfil">jhossephy</h2>
+                        <p class="Profile-description">Desarrollador frontal</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            soy un Desarrollador
+                        </p>
+                    </div>
+                    <div class="iconos-redes">
+                        <a href=""><img src="C:\Users\SENATI\Pictures\descarga (3).png" class="icone"></a>
+                        <a href=""><img src="C:\Users\SENATI\Pictures\descarga (2).png" class="icone"></a>
+                        <a href=""><img src="C:\Users\SENATI\Pictures\descarga (1).png" class="icone"></a>
+
+                    </div>
+
+                    <div id="proyectos" class="section" style="display: none;">
+                        <h2>mis proyectos</h2>
+                        <div class="proyectos-grid">
+                            <div class="proyecto">
+                                <h3>proyecto 1</h3>
+                                <p>Descripcionde proyecto 1</p>
+                            </div>
+                            <div class="proyecto">
+                                <h3>proyecto 2</h3>
+                                <p>Descripcionde proyecto 2</p>
+                            </div>
+                            <div class="proyecto">
+                                <h3>proyecto 3</h3>
+                                <p>Descripcionde proyecto 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contacto" class="section" style="display: none;">
+                    <h2>contactame</h2>
+                    <form>
+                        <label for="nombre">nombre</label>
+                        <input type="text" id="nombre" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+
+                        <label for="mensaje"> dejame un mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+
+                        <button type="submit">enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <script>
+                function mostrarSeccion(seccion) {
+                    const secciones = document.querySelectorAll('.section')
+                    secciones.forEach(function (sec) {
+                        sec.style.display = 'none';
+
+                    });
+                    document.getElementById(seccion).style.display = 'block';
+                }
+            </script>
+
+    </body>
+
+    </html>
